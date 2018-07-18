@@ -46,17 +46,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-
-        Toast.makeText(this, myJoker.getJoke(), Toast.LENGTH_SHORT).show();
-    }
-
-    public void launchDisplayAJokeActivity(View view) {
-        Intent intentThatStartsDisplayAJokeActivity = new Intent(this, DisplayAJokeActivity.class);
-
-//        Joker joker = new Joker();
-//        String joke = joker.getJoke();
         mJoke = myJoker.getJoke();
+        Intent intentThatStartsDisplayAJokeActivity = new Intent(this, DisplayAJokeActivity.class);
         intentThatStartsDisplayAJokeActivity.putExtra(DisplayAJokeActivity.JOKE_KEY, mJoke);
         startActivity(intentThatStartsDisplayAJokeActivity);
+        Toast.makeText(this, myJoker.getJoke(), Toast.LENGTH_SHORT).show();
     }
 }

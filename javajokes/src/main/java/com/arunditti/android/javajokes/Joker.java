@@ -1,7 +1,7 @@
 package com.arunditti.android.javajokes;
 
 public class Joker {
-    public String getJoke() {
+    public static String getJoke() {
         return "This is totally a funny joke";
     }
 }
