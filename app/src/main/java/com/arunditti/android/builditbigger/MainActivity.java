@@ -1,5 +1,6 @@
 package com.arunditti.android.builditbigger;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,17 +9,18 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.arunditti.android.displayajoke.DisplayAJokeActivity;
 import com.arunditti.android.javajokes.Joker;
 
 public class MainActivity extends AppCompatActivity {
-    Joker myJoker;
+
+    Joker myJoker = new Joker();
+    String mJoke;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        myJoker = new Joker();
     }
 
     @Override
@@ -48,4 +50,13 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, myJoker.getJoke(), Toast.LENGTH_SHORT).show();
     }
 
+    public void launchDisplayAJokeActivity(View view) {
+        Intent intentThatStartsDisplayAJokeActivity = new Intent(this, DisplayAJokeActivity.class);
+
+//        Joker joker = new Joker();
+//        String joke = joker.getJoke();
+        mJoke = myJoker.getJoke();
+        intentThatStartsDisplayAJokeActivity.putExtra(DisplayAJokeActivity.JOKE_KEY, mJoke);
+        startActivity(intentThatStartsDisplayAJokeActivity);
+    }
 }
