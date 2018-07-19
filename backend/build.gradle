@@ -31,14 +31,13 @@ dependencies {
     implementation 'javax.servlet:servlet-api:2.5'
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
-    implementation project(":javajokes")
+    implementation project(':javalibjokes')
 }
 
 appengine {
     tools.cloudSdkHome="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-//    run {
-//        host = "0.0.0.0"
-//        port = 8081
-//    }
+    run {
+        host = "0.0.0.0"
+    }
 }
 

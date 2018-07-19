@@ -1,10 +1,9 @@
-package com.udacity.gradle.builditbigger.backend;
+package com.arunditti.android.builditbigger.backend;
 
 import com.arunditti.android.javajokes.Joker;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-import com.arunditti.android.javajokes.Joker;
 
 import javax.inject.Named;
 
@@ -13,8 +12,8 @@ import javax.inject.Named;
         name = "myApi",
         version = "v1",
         namespace = @ApiNamespace(
-                ownerDomain = "backend.builditbigger.gradle.udacity.com",
-                ownerName = "backend.builditbigger.gradle.udacity.com",
+                ownerDomain = "backend.builditbigger.android.arunditti.com",
+                ownerName = "backend.builditbigger.android.arunditti.com",
                 packagePath = ""
         )
 )
