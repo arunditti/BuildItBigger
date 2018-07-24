@@ -27,6 +27,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "default"
+    productFlavors {
+        free {
+            applicationId "com.arunditti.android.builditbigger.free"
+        }
+        paid {
+            applicationId "com.arunditti.android.builditbigger.paid"
+        }
+    }
 }
 
 dependencies {
@@ -42,6 +52,8 @@ dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
     implementation project(':javalibjokes')
     implementation project(':androidlibdisplayajoke')
+    //Dependency for free versions
+    freeCompile 'com.google.android.gms:play-services-ads:9.4.0'
 
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -50,4 +62,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestCompile 'com.android.support.test:runner:1.0.2'
 }

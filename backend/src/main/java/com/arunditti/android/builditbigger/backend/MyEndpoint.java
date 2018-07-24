@@ -29,7 +29,7 @@ public class MyEndpoint {
     }
 
     @ApiMethod(name = "fetchAJoke")
-    public MyBean fetchAJoke(@Named("name") String name) {
+    public MyBean fetchAJoke() {
         MyBean response = new MyBean();
         response.setData(Joker.getJoke());
         return response;
