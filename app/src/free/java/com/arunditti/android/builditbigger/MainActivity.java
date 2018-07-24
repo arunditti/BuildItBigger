@@ -25,9 +25,7 @@ import com.arunditti.android.builditbigger.backend.myApi.MyApi;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-//
-//    Joker myJoker= new Joker();
-//    String mJoke;
+
     private InterstitialAd mInterstitialAd;
 
     @Override

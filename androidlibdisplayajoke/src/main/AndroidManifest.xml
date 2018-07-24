@@ -3,7 +3,8 @@
     package="com.arunditti.android.displayajoke">
 
     <application>
-        <activity android:name=".DisplayAJokeActivity"></activity>
+        <activity android:name=".DisplayAJokeActivity"
+            android:parentActivityName=".DisplayAJokeActivity"></activity>
     </application>
 
 </manifest>

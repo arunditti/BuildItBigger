@@ -23,9 +23,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Joker myJoker= new Joker();
-    String mJoke;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
