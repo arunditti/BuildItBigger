@@ -1,4 +1,12 @@
 # BuildItBigger
+Created as part of Udacity's Android Developer Nanodegree course by Google
+### Project Features
+- A Java library that provides jokes. 
+- Android Library containing an Activity that will display a joke passed to it as an intent extra. 
+- set up a Google Cloud Endpoints development server, and pull our jokes from there. 
+- Add code to test that Async task successfully retrieves a non-empty string. 
+- A free and paid product flavors to your app.
+- Add an interstitial ad to the free version. 
 ### Screenshots
 ![layer 0](https://user-images.githubusercontent.com/8518978/47444597-d68cb280-d784-11e8-92b2-95dc75357b9b.png)
 ![layer 0-3](https://user-images.githubusercontent.com/8518978/47444600-d8567600-d784-11e8-889f-0ac3fdfe7dd6.png)
